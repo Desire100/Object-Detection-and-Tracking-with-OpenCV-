@@ -9,6 +9,16 @@ This repository will help you to understand a variety of object detection and tr
  
 ## Corner Detection 
   Looking for corners to find general edges of objects.
+  When thinking about corner detection in computer vision, we should ask ourselvesL What is a corner?
+  A corner is a point whose local neighborhood stands in two dominant and different edge directions also a corner can be interpreted as   the   junction of two edges, where an edge is a sudden change in image brightness. 
+  
+  
+  there are various corner detection algorithms:
+  #### Harris Corner Detection
+   It can be detected by looking for significant change in all directions
+   
+  #### Shi-Tomasi Corner Detection 
+   Made a small modification to the Harris Corner Detector which ended up with better results. 
   
 ## Grid Detection 
 Combinaing both concepts to find grids in images* useful for applications)
