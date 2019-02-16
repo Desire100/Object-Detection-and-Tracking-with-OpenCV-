@@ -14,11 +14,19 @@ This repository will help you to understand a variety of object detection and tr
   
   
   there are various corner detection algorithms:
-  #### Harris Corner Detection
+  ### Harris Corner Detection
    It can be detected by looking for significant change in all directions
    
-  #### Shi-Tomasi Corner Detection 
+  ### Shi-Tomasi Corner Detection 
    Made a small modification to the Harris Corner Detector which ended up with better results. 
+   Shi-Tomasi Corner Detector & Good Features to Track Paper
+[Link to Paper](http://www.ai.mit.edu/courses/6.891/handouts/shi94good.pdf)
+#### Good Feature To Track a paper 
+Function Parameters
+image Input 8-bit or floating-point 32-bit, single-channel image.
+corners Output vector of detected corners.
+maxCorners Maximum number of corners to return. If there are more corners than are found,the strongest of them is returned. maxCorners <= 0 implies that no limit on the maximum is set and all detected corners are returned.
+qualityLevel Parameter characterizing the minimal accepted quality of image corners. The parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue (see #cornerMinEigenVal ) or the Harris function response (see #cornerHarris ). The corners with the quality measure less than the product are rejected. For example, if the best corner has the quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure less than 15 are rejected.
   
 ## Grid Detection 
 Combinaing both concepts to find grids in images* useful for applications)
