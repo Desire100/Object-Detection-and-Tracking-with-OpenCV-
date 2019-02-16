@@ -26,7 +26,18 @@ Function Parameters
 image Input 8-bit or floating-point 32-bit, single-channel image.
 corners Output vector of detected corners.
 maxCorners Maximum number of corners to return. If there are more corners than are found,the strongest of them is returned. maxCorners <= 0 implies that no limit on the maximum is set and all detected corners are returned.
-qualityLevel Parameter characterizing the minimal accepted quality of image corners. The parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue (see #cornerMinEigenVal ) or the Harris function response (see #cornerHarris ). The corners with the quality measure less than the product are rejected. For example, if the best corner has the quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure less than 15 are rejected.
+qualityLevel Parameter characterizing the minimal accepted quality of image corners. The parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue (see cornerMinEigenVal ) or the Harris function response (see #cornerHarris ). The corners with the quality measure less than the product are rejected. For example, if the best corner has the quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure less than 15 are rejected.
+
+## Edge Detection
+This section will focus on Canny edge detector, one of the most popular edge detection algorithms.
+### Steps:
+##### Apply Guassian filter to smooth the image in order to remove the noise.
+##### Find the intensity gradients of the image.
+##### Apply non-maximum suppression to get ridof spurious response to edge detection.
+##### Apply double threshold to determine potential edges.
+##### Track edge by hysteresis: Finalize the detectiion of edges by suppressing all teh other edges that are weak and not connected to strong edges.
+
+
   
 ## Grid Detection 
 Combinaing both concepts to find grids in images* useful for applications)
@@ -41,7 +52,11 @@ More advances methods of detecting matching objects in another image, even if th
 Advanced a;gorithm that allows us to segment images into foreground and background. also allows us to manually set seeds to choose segments of an image.
 
 ## Facial and Eye Detection
-we'll use Haar Cascades to detect faces in images, not this not yet facial recognition.
+we'll use Haar Cascades to detect faces in images, note this not yet facial recognition.
+##### Face detection using Haar Cascades, whichis key component of the Viola_Jones object detection framework. 
+##### We will be able to very quick detect if a face is in an image and locate it.
+##### However we won't know who's face it belongs to.
+##### We would need a really large dataset for facial recognition.
 
  
 
