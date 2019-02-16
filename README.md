@@ -58,6 +58,8 @@ we'll use Haar Cascades to detect faces in images, note this not yet facial reco
 ##### However we won't know who's face it belongs to.
 ##### We would need a really large dataset for facial recognition.
 
+OpenCV comes with pre-trained xml files of various Haar Cascades. check this folder. 
+
  
 
  
