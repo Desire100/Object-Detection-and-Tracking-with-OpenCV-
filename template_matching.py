@@ -15,6 +15,8 @@ such as facial recognition.
 face= cv2.imread('../DATA/sammy_face.jpg')
 face = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
 plt.imshow(face)
+
+width, height = face.shape[:-1]
  
 # All the 6 methods for comparison in a list
 # Note how we are using strings, later on we'll use the eval() function to convert to function
