@@ -4,7 +4,7 @@
 This repository will help you to understand a variety of object detection and tracking methods with help of opencv which is open source computer vison library.
 
 ## Template Matching
- Simply looking for an exact copy of an image in another image.
+
  Template matching is the simplest form of object detection. It simply scans a larger image for a  provided template by sliding the template target image across the larfer image.
  
 ## Corner Detection 
